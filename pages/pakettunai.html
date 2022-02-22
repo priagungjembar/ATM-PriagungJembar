@@ -12,20 +12,72 @@
             <h1>PILIH PAKET TUNAI</h1>
         </div>
 
-        <div class="flex justify-between space-x-44 text-white font-semibold text-3xl mt-12">
-            <div class="grid space-y-20 w-1/2">
-                <button onclick="seRatus"> <- Rp. 100.000,00</button>
-                <button onclick="duaRatus"> <- Rp. 200.000,00</button>
-                <button onclick="tigaRatus"> <- Rp. 300.000,00</button>
-                <button onclick="limaRatus"> <- Rp. 500.000,00</button>
+        <div class="flex space-x-44 text-white font-semibold text-3xl mt-12 justify-center">
+            <div class="grid space-y-24">
+                <button onclick="seRatus()"> <- Rp. 100.000.00 </button><br>
+                <button onclick="duaRatus()"> <- Rp. 200.000.00</button><br>
+                <button onclick="tigaRatus()"> <- Rp. 300.000.00</button><br>
+                <button onclick="limaRatus()"> <- Rp. 500.000.00</button>
             </div>
-            <div class="grid space-y-20 text-right w-1/2">
-                <button onclick="satuJuta">Rp. 1.000.000,00 -></button>
-                <button onclick="satuSetengah">Rp. 1.500.000,00 -></button>
-                <button onclick="duaJuta">Rp. 2.000.000,00 -></button>
-                <button onclick="lainnya">LAINNYA -></button >
+            <div class="grid space-y-24 text-right">
+                <button onclick="satuJuta()">Rp. 1.000.000.00 -></button><br>
+                <button onclick="satuSetengah()">Rp. 1.500.000.00 -></button><br>
+                <button onclick="duaJuta()">Rp. 2.000.000.00 -></button><br>
+                <button href="/pages/jenistransaksi.html">LAINNYA -></button >
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    let uiambil = '/pages/ambilkartu.html';
+    let saldo = 5000000;
+    let paket = {
+        seratus: '100000',
+        duaratus: '100000',
+        tigaratus: '100000',
+        limaratus: '100000',
+        satujuta: '100000',
+        satusetengah: '100000',
+        duajuta: '100000'
+    };
+
+    function seRatus() {
+        let saldoakhir = saldo - paket.seratus;
+        confirm(`SISA SALDO ANDA ADALAH Rp.${saldoakhir}`)
+        window.open(uiambil, '_blank')
+    }
+    function duaRatus() {
+        let saldoakhir = saldo - paket.duaratus;
+        confirm(`SISA SALDO ANDA ADALAH Rp.${saldoakhir}`)
+        window.open(uiambil, '_blank')
+    }
+    function tigaRatus() {
+        let saldoakhir = saldo - paket.tigaratus;
+        confirm(`SISA SALDO ANDA ADALAH Rp.${saldoakhir}`)
+        window.open(uiambil, '_blank')
+    }
+    function limaRatus() {
+        let saldoakhir = saldo - paket.limaratus;
+        confirm(`SISA SALDO ANDA ADALAH Rp.${saldoakhir}`)
+        window.open(uiambil, '_blank')
+    }
+    function satuJuta() {
+        let saldoakhir = saldo - paket.satujuta;
+        confirm(`SISA SALDO ANDA ADALAH Rp.${saldoakhir}`)
+        window.open(uiambil, '_blank')
+    }
+    function satuSetengah() {
+        let saldoakhir = saldo - paket.satusetengah;
+        confirm(`SISA SALDO ANDA ADALAH Rp.${saldoakhir}`)
+        window.open(uiambil, '_blank')
+    }
+    function duaJuta() {
+        let saldoakhir = saldo - paket.duajuta;
+        confirm(`SISA SALDO ANDA ADALAH Rp.${saldoakhir}`)
+        window.open(uiambil, '_blank')
+    }
+
+</script>
+
 </html>
